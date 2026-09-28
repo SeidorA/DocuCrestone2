@@ -1,0 +1,146 @@
+@import "tailwindcss";
+@import "caralstable/style.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-poppins);
+  --font-mono: var(--font-geist-mono);
+  --font-poppins: var(--font-poppins);
+
+  --color-seidor-main: var(--color-seidor-main);
+  --color-seidor-hard: var(--color-seidor-hard);
+  --color-seidor-light: var(--color-seidor-light);
+  --color-seidor-main-text: var(--color-seidor-main-text);
+
+  --color-neutral-100: var(--color-neutral-100);
+  --color-neutral-400: var(--color-neutral-400);
+  --color-neutral-500: var(--color-neutral-500);
+  --color-neutral-800: var(--color-neutral-800);
+  --color-neutral-900: var(--color-neutral-900);
+  --color-neutral-body: var(--color-neutral-body);
+  --color-container: var(--color-container);
+  --color-full: var(--color-full);
+  --color-container-50: rgba(241, 245, 249, 0.50);
+
+  --color-info-main: var(--color-info-main);
+  --color-info-hard: var(--color-info-hard);
+  --color-info-light: var(--color-info-light);
+
+  --color-success-main: var(--color-success-main);
+  --color-success-hard: var(--color-success-hard);
+  --color-success-light: var(--color-success-light);
+
+  --color-danger-main: var(--color-danger-main);
+  --color-danger-hard: var(--color-danger-hard);
+  --color-danger-light: var(--color-danger-light);
+
+  --color-warning-main: var(--color-warning-main);
+  --color-warning-hard: var(--color-warning-hard);
+  --color-warning-light: var(--color-warning-light);
+
+  --color-indido-main: var(--color-indido-main);
+  --color-indido-hard: var(--color-indido-hard);
+  --color-indido-light: var(--color-indido-light);
+
+  --color-sakura-main: var(--color-sakura-main);
+  --color-sakura-hard: var(--color-sakura-hard);
+  --color-sakura-light: var(--color-sakura-light);
+}
+
+:root {
+  --background: var(--color-full);
+  --foreground: var(--color-neutral-900);
+  --container: var(--color-container);
+}
+
+.dark {
+  --background: var(--color-full);
+  --foreground: var(--color-neutral-100);
+  --container: var(--color-container);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-full);
+    --foreground: var(--color-neutral-100);
+    --container: var(--color-container);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), sans-serif;
+  min-height: 100vh;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+/* Markdown styling enhancement */
+.doc-content h1,
+.doc-content h2,
+.doc-content h3,
+.doc-content h4 {
+  scroll-margin-top: 6rem;
+}
+
+
+.videomd {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  margin: 12px 0;
+}
