@@ -109,16 +109,16 @@ export const navbar: NavbarConfig = {
  * Copyright, descripción y redes sociales.
  */
 export const footer: FooterConfig = {
-  copyright: 'Documentación técnica generada desde Portal CMS.',
-  description: 'Documentación oficial y técnica generada desde Portal CMS',
+  copyright: 'Official Crestone documentation.',
+  description: 'Official Crestone documentation.',
   social: [
     {
-      name: 'github',
-      url: 'https://github.com',
+      name: 'Web',
+      url: 'https://crestone.io/',
     },
     {
-      name: 'linkedin',
-      url: 'https://linkedin.com',
+      name: 'Demo',
+      url: 'https://crestone.seidoranalytics.com/',
     },
   ],
 };
