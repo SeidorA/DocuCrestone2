@@ -1,7 +1,7 @@
 services:
   crestone-doc:
     container_name: crestone-doc
-    image: cloudseidoranalytics/crestone-doc:da6e60008a1e1fdc0fafc375aa9c7bfe6bdb3056
+    image: cloudseidoranalytics/crestone-doc:latest
     restart: unless-stopped
     networks:
       - portal-mgmt
