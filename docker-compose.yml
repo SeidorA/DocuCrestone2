@@ -1,6 +1,10 @@
 services:
   docusaurus:
     image: cloudseidoranalytics/docucrestone:da6e60008a1e1fdc0fafc375aa9c7bfe6bdb3056
-    ports:
-      - "8085:80"
     restart: unless-stopped
+    networks:
+      - portal-mgmt
+
+networks:
+  portal-mgmt:
+    external: true
