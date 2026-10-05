@@ -32,7 +32,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: cloudseidoranalytics/docucrestone
+          images: cloudseidoranalytics/crestone-doc
           tags: |
             type=sha,format=long,prefix=
             type=sha,format=short,prefix=

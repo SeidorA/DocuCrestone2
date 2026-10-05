@@ -1,6 +1,7 @@
 services:
-  docusaurus:
-    image: cloudseidoranalytics/docucrestone:da6e60008a1e1fdc0fafc375aa9c7bfe6bdb3056
+  crestone-doc:
+    container_name: crestone-doc
+    image: cloudseidoranalytics/crestone-doc:da6e60008a1e1fdc0fafc375aa9c7bfe6bdb3056
     restart: unless-stopped
     networks:
       - portal-mgmt
